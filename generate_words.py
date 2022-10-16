@@ -1,13 +1,20 @@
-import sys
-import random
-from urllib.request import urlopen
-import os
-# tts
-import sys
-from googletrans import Translator, constants
-from pprint import pprint
+try:
+	import sys
+	import random
+	from urllib.request import urlopen
+	import os
+	# tts
+	import sys
+	from googletrans import Translator, constants
+	from pprint import pprint
+except:
+	os.system('pip install -r requirements.txt')
+	
 
-translator = Translator()
+translator = Translator() # class
+
+
+
 
 
 all_ans_words = []
