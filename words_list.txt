@@ -1,0 +1,7 @@
+tuvungmoi.txt
+new_10000_words.txt
+1000newword.txt
+new_3000_words.txt
+3000_words.txt
+new_1000_words.txt
+new.txt

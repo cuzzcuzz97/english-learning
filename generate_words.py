@@ -1,6 +1,7 @@
 import sys
 import random
 from urllib.request import urlopen
+import os
 # tts
 import sys
 from googletrans import Translator, constants
@@ -12,7 +13,15 @@ translator = Translator()
 all_ans_words = []
 all_wrong_words = []
 def main():
-	list_vocab = ['new_1000_words.txt','new_3000_words.txt','new_10000_words.txt','new.txt','tuvungmoi.txt']
+
+	os.system('python get_dir.py')
+	list_vocab = []
+
+	with open('words_list.txt', 'r') as file:
+		n = file.readlines()
+		for w in n:
+			w = w.replace('\n','')
+			list_vocab.append(w)
 	try:
 		sys.argv[1]
 		list_vocab.append(sys.argv[1])
@@ -36,7 +45,7 @@ def generate_word(v):
 def answer_part(n,list_vocab):
 	point = 0
 	while True:
-		w = generate_word(list_vocab[n-1])
+		w = generate_word(f"words_file/{list_vocab[n-1]}")
 		if len(w) > 2:
 			q = hidden_part(w)
 			print(q)

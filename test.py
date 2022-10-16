@@ -1,12 +1,8 @@
+s = []
 
-
-
-list  = [0,1,2,3,4,5,6]
-
-def print_w(list):
-	for w in list:
-		print(w)
-
-
-
-print_w(list)
+with open('words_list.txt', 'r') as file:
+    n = file.readlines()
+    for w in n:
+        w = w.replace('\n','')
+        s.append(w)
+print(s)        
