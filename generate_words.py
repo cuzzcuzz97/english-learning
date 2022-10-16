@@ -14,9 +14,6 @@ except:
 translator = Translator() # class
 
 
-
-
-
 all_ans_words = []
 all_wrong_words = []
 def main():
